@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony G. Ferry Inc. | Licensed Electrical Contractors Since 1972</title>
+    <meta name="description" content="Anthony G. Ferry Inc. provides commercial, residential, infrastructure, and emergency electrical services throughout New York City, Westchester, New Jersey, and Florida. Trusted electrical contractors since 1972.">
+    
+    <link rel="icon" type="image/jpeg" href="Anthony G ferry Logo (1).jpg">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        navy: {
+                            800: '#0B192C',
+                            900: '#040D1A',
+                        },
+                        electric: {
+                            400: '#38BDF8',
+                            500: '#00D2FF',
+                            600: '#2563EB',
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Plus Jakarta Sans', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.2; transform: scale(1); }
+            50% { opacity: 0.4; transform: scale(1.05); }
+        }
+        .futuristic-glow {
+            position: absolute;
+            background: radial-gradient(circle, rgba(0,210,255,0.15) 0%, rgba(0,0,0,0) 70%);
+            animation: pulseGlow 8s infinite ease-in-out;
+            pointer-events: none;
+        }
+        .glass-card {
+            background: rgba(11, 25, 44, 0.75);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .glass-card:hover {
+            border-color: rgba(0, 210, 255, 0.4);
+            box-shadow: 0 0 30px rgba(0, 210, 255, 0.15);
+            transform: translateY(-4px);
+        }
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Electrician",
+      "name": "Anthony G. Ferry Inc. (AGF Electrical)",
+      "image": "Anthony G ferry Logo (1).jpg",
+      "description": "Anthony G. Ferry Inc. provides commercial, residential, infrastructure, and emergency electrical services throughout New York City, Westchester, New Jersey, and Florida. Trusted electrical contractors since 1972.",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Bronx",
+        "addressRegion": "NY",
+        "addressCountry": "US"
+      },
+      "url": "https://anthonyferry.framer.website/",
+      "telephone": "+1-718-555-0190",
+      "priceRange": "$$$",
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
+          "opens": "00:00",
+          "closes": "23:59"
+        }
+      ],
+      "areaServed": ["New York City", "Westchester County", "New Jersey", "Florida"],
+      "foundingDate": "1972"
+    }
+    </script>
+</head>
+<body class="bg-navy-900 text-gray-100 font-sans overflow-x-hidden antialiased">
+
+    <a href="tel:+17185550190" class="fixed bottom-6 right-6 z-50 flex items-center justify-center w-16 h-16 bg-red-600 hover:bg-red-500 text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110 group animate-bounce">
+        <i class="fas fa-phone-alt text-xl group-hover:rotate-12 transition-transform"></i>
+        <span class="absolute right-20 bg-red-600 text-white text-xs font-bold px-3 py-1.5 rounded-md whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none tracking-wide shadow-xl">24/7 EMERGENCY CALL</span>
+    </a>
+
+    <header class="sticky top-0 z-40 w-full bg-navy-800/80 backdrop-blur-md border-b border-white/10 transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <a href="#" class="flex items-center space-x-3 group">
+                <img src="Anthony G ferry Logo (1).jpg" alt="Anthony G. Ferry Inc. Logo" class="h-12 w-12 object-cover rounded border border-electric-500/30 group-hover:border-electric-500 transition-colors">
+                <div class="flex flex-col">
+                    <span class="font-display font-bold text-lg tracking-wider text-white uppercase group-hover:text-electric-500 transition-colors">Anthony G. Ferry Inc.</span>
+                    <span class="text-[10px] text-gray-400 uppercase tracking-[0.2em] font-semibold">Electrical Contractors</span>
+                </div>
+            </a>
+            
+            <nav class="hidden md:flex items-center space-x-8 text-sm font-medium tracking-wide">
+                <a href="#about" class="text-gray-300 hover:text-electric-500 transition-colors">About</a>
+                <a href="#services" class="text-gray-300 hover:text-electric-500 transition-colors">Services</a>
+                <a href="#why-choose" class="text-gray-300 hover:text-electric-500 transition-colors">Why AGF</a>
+                <a href="#projects" class="text-gray-300 hover:text-electric-500 transition-colors">Projects</a>
+                <a href="#process" class="text-gray-300 hover:text-electric-500 transition-colors">Process</a>
+                <a href="#testimonials" class="text-gray-300 hover:text-electric-500 transition-colors">Reviews</a>
+                <a href="#contact" class="text-gray-300 hover:text-electric-500 transition-colors">Contact</a>
+            </nav>
+
+            <div class="hidden lg:block">
+                <a href="https://anthonyferry.framer.website/" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-md text-sm font-semibold tracking-wide border border-electric-500 text-electric-500 hover:bg-electric-500 hover:text-navy-900 transition-all duration-300 shadow-[0_0_15px_rgba(0,210,255,0.1)]">
+                    Client Portal
+                </a>
+            </div>
+            
+            <button id="mobile-menu-btn" class="md:hidden text-gray-300 hover:text-white focus:outline-none">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <div id="mobile-menu" class="hidden md:hidden bg-navy-800 border-b border-white/10 px-4 pt-2 pb-6 space-y-3">
+            <a href="#about" class="block text-gray-300 hover:text-electric-500 text-base py-2">About</a>
+            <a href="#services" class="block text-gray-300 hover:text-electric-500 text-base py-2">Services</a>
+            <a href="#why-choose" class="block text-gray-300 hover:text-electric-500 text-base py-2">Why AGF</a>
+            <a href="#projects" class="block text-gray-300 hover:text-electric-500 text-base py-2">Projects</a>
+            <a href="#process" class="block text-gray-300 hover:text-electric-500 text-base py-2">Process</a>
+            <a href="#testimonials" class="block text-gray-300 hover:text-electric-500 text-base py-2">Reviews</a>
+            <a href="#contact" class="block text-gray-300 hover:text-electric-500 text-base py-2">Contact</a>
+            <a href="https://anthonyferry.framer.website/" target="_blank" rel="noopener noreferrer" class="block w-full text-center px-4 py-2.5 rounded bg-electric-600 text-white font-medium">Request Profile</a>
+        </div>
+    </header>
+
+    <section id="hero" class="relative min-h-[90vh] flex items-center justify-center overflow-hidden bg-gradient-to-b from-navy-800 to-navy-900 px-4 sm:px-6 lg:px-8 py-20">
+        <div class="futuristic-glow w-[600px] h-[600px] top-[-10%] right-[-10%]"></div>
+        <div class="futuristic-glow w-[500px] h-[500px] bottom-[-20%] left-[-10%]"></div>
+        
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(to_bottom,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:4rem_4rem]"></div>
+
+        <div class="relative max-w-5xl mx-auto text-center z-10">
+            <div class="inline-flex items-center space-x-2 bg-electric-500/10 border border-electric-500/30 rounded-full px-4 py-1.5 mb-8 animate-fade-in">
+                <span class="flex h-2 w-2 rounded-full bg-electric-500 animate-ping"></span>
+                <span class="text-xs uppercase font-bold tracking-widest text-electric-400">Powering New York Since 1972</span>
+            </div>
+            
+            <h1 class="font-display font-extrabold text-4xl sm:text-6xl lg:text-7xl tracking-tight text-white mb-6">
+                <a href="https://anthonygferryinc.wordpress.com/" target="_blank" rel="noopener noreferrer" class="hover:text-electric-500 transition-colors duration-300">Anthony G. Ferry Inc.</a>
+            </h1>
+            
+            <p class="font-display text-xl sm:text-2xl lg:text-3xl font-medium text-gray-300 tracking-wide mb-10 max-w-3xl mx-auto">
+                Electrical Contractors Since 1972
+            </p>
+
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
+                <a href="https://anthonygferry.framer.website/" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-electric-600 hover:bg-electric-500 text-white font-bold tracking-wide rounded-md shadow-lg shadow-electric-600/20 transition-all transform hover:-translate-y-0.5 duration-200 text-center uppercase text-sm">
+                    Request a Quote <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                </a>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6 pt-10 border-t border-white/10 max-w-4xl mx-auto">
+                <div class="flex items-center space-x-3 justify-center md:justify-start">
+                    <i class="fas fa-id-card text-electric-500 text-2xl"></i>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-300 text-left">Licensed &<br>Insured</span>
+                </div>
+                <div class="flex items-center space-x-3 justify-center md:justify-start">
+                    <i class="fas fa-history text-electric-500 text-2xl"></i>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-300 text-left">50+ Years<br>Experience</span>
+                </div>
+                <div class="flex items-center space-x-3 justify-center md:justify-start">
+                    <i class="fas fa-bolt text-electric-500 text-2xl"></i>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-300 text-left">24/7 Emergency<br>Service</span>
+                </div>
+                <div class="flex items-center space-x-3 justify-center md:justify-start">
+                    <i class="fas fa-map-marked-alt text-electric-500 text-2xl"></i>
+                    <span class="text-xs font-semibold uppercase tracking-wider text-gray-300 text-left">Multi-State<br>Licensed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-800 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">Our Legacy</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-6">Over Five Decades of Electrical Excellence</h2>
+                    <div class="text-gray-300 space-y-4 text-base leading-relaxed">
+                        <p>
+                            Since establishing our operations in 1972, <a href="http://anthonygferryinc.website3.me/" target="_blank" rel="noopener noreferrer" class="text-electric-400 font-semibold hover:underline">Anthony G. Ferry Inc.</a> has emerged as an authoritative force in electrical contracting across New York City, Westchester County, New Jersey, and Florida. Built on the core pillars of safety, uncompromising build quality, and deeply specialized technical knowledge, we deliver comprehensive, high-tier construction services tailored to modern developments.
+                        </p>
+                        <p>
+                            Our team of highly seasoned, master-level electricians navigates complex logistical blueprints across commercial installations, civil infrastructure upgrades, critical backup grid deployments, and enterprise facilities. Decades of engineering synergy ensure each mission-critical project is executed on phase, within compliance parameters, and completely safety-proofed.
+                        </p>
+                    </div>
+                    
+                    <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-10 pt-8 border-t border-white/10">
+                        <div>
+                            <div class="font-display font-bold text-3xl text-white">1972</div>
+                            <div class="text-[11px] text-gray-400 font-bold tracking-wider uppercase mt-1">Established</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-bold text-3xl text-white">4+</div>
+                            <div class="text-[11px] text-gray-400 font-bold tracking-wider uppercase mt-1">States Covered</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-bold text-3xl text-white">100%</div>
+                            <div class="text-[11px] text-gray-400 font-bold tracking-wider uppercase mt-1">Safety Record</div>
+                        </div>
+                        <div>
+                            <div class="font-display font-bold text-3xl text-white">10k+</div>
+                            <div class="text-[11px] text-gray-400 font-bold tracking-wider uppercase mt-1">Completed Projects</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="relative group">
+                    <div class="absolute -inset-1.5 bg-gradient-to-r from-electric-500 to-blue-600 rounded-lg blur opacity-20 group-hover:opacity-40 transition duration-1000"></div>
+                    <img src="Electrician-program-highlight.webp" alt="High-scale construction electrical work" class="relative rounded-lg w-full object-cover shadow-2xl h-[450px]">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-900 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">Enterprise Offerings</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">Comprehensive Engineering & Electrical Solutions</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    From deep subterranean structural utility linkages to complex commercial development layouts, <a href="https://anthonygferry.weebly.com/" target="_blank" rel="noopener noreferrer" class="text-electric-400 hover:underline">Anthony G. Ferry Inc.</a> executes high-tier solutions. Our engineering protocols optimize operational continuity across critical commercial and industrial installations.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Commercial Construction</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Complete electrical masterplanning and deployment across high-rise corporate builds, manufacturing facilities, and mixed-use commercial centers.</p>
+                    </div>
+                    <a href="https://anthonygferry.simdif.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Residential Solutions</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Architectural grade electrical configurations for premium estates, high-density multi-family properties, and smart home systems.</p>
+                    </div>
+                    <a href="https://sites.google.com/view/anthonygferry/home" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-network-wired"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Infrastructure Projects</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Large-scale civic network grid modifications, primary structural sub-stations, and municipality utility system overhauls.</p>
+                    </div>
+                    <a href="https://anthonygferryinc.wixsite.com/anthonygferry" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Emergency Repairs</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Immediate high-priority fault response mitigation and critical system recoveries executed 24/7/365 across corporate assets.</p>
+                    </div>
+                    <a href="https://anthonygferryinc.odoo.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-charging-station"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Generators & Backup</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Enterprise fallback power grid modeling, robust commercial generator integrations, and load balancing fail-safes.</p>
+                    </div>
+                    <a href="https://anthonygferryinc.wordpress.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-hdd"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Upgrades & Meter Banks</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">High-amperage switchgear modernizations, structured multi-tenant meter configuration deployments, and incoming line expansions.</p>
+                    </div>
+                    <a href="http://anthonygferryinc.website3.me/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-ethernet"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Data & Fiber Cabling</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Architectural infrastructure cabling, structural multi-mode fiber frameworks, Cat6 network maps for corporate datacenters.</p>
+                    </div>
+                    <a href="https://anthonygferry.framer.website/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="w-12 h-12 bg-electric-500/10 border border-electric-500/20 text-electric-500 rounded flex items-center justify-center mb-5 text-xl">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="font-display font-bold text-lg text-white mb-2">Maintenance & Testing</h3>
+                        <p class="text-gray-400 text-xs leading-relaxed mb-6">Thermal imaging diagnostics, system load testing analysis, preventative safety logs, and active troubleshooting assessments.</p>
+                    </div>
+                    <a href="https://anthonygferry.weebly.com/" target="_blank" rel="noopener noreferrer" class="text-xs font-bold uppercase tracking-wider text-electric-400 hover:text-white inline-flex items-center transition-colors">Learn More <i class="fas fa-chevron-right ml-1.5 text-[9px]"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-choose" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-800 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">The AGF Advantage</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">Uncompromising Standards. Decades of Verification.</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Partnering with <a href="https://anthonygferry.simdif.com/" target="_blank" rel="noopener noreferrer" class="text-electric-400 hover:underline">Anthony G. Ferry Inc.</a> connects your high-priority projects with unmatched operational capability. Over five decades of high-density metropolitan project deliveries solidify our status as a market leading enterprise.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
+                <div class="space-y-6">
+                    <div class="glass-card p-5 rounded-lg border-l-4 border-l-electric-500">
+                        <h4 class="font-display font-bold text-base text-white mb-1.5">Established Since 1972</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">Continuous delivery of industrial, infrastructural, and high-value commercial construction installations through every regulatory shift over 50 years.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-lg border-l-4 border-l-electric-500">
+                        <h4 class="font-display font-bold text-base text-white mb-1.5">Licensed & Full-Coverage Insured</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">Comprehensive risk containment strategies, multi-state commercial certifications, and elite standard bond guarantees.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-lg border-l-4 border-l-electric-500">
+                        <h4 class="font-display font-bold text-base text-white mb-1.5">Safety-First Protocols</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">OSHA-compliant field procedures, internal structural grid auditing, and an exemplary industry safety index rating.</p>
+                    </div>
+                </div>
+
+                <div class="relative group mx-auto max-w-sm lg:max-w-none">
+                    <div class="absolute -inset-2 bg-electric-500/10 rounded-xl blur-xl opacity-50"></div>
+                    <img src="electrician-facts.jpg" alt="Industrial electrical panel configuration blueprint" class="relative rounded-xl shadow-2xl border border-white/10 w-full h-[380px] object-cover">
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-card p-5 rounded-lg border-l-4 border-l-electric-500">
+                        <h4 class="font-display font-bold text-base text-white mb-1.5">Large-Scale Project Experts</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">Highly adept in balancing grid metrics for major high-rise developments and metropolitan transit networks.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-lg border-l-4 border-l-electric-500">
+                        <h4 class="font-display font-bold text-base text-white mb-1.5">Elite Level Technicians</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">Continuously evaluated on complex control machinery layouts, local building parameters, and fiber diagnostics.</p>
+                    </div>
+                    <div class="glass-card p-5 rounded-lg border-l-4 border-l-electric-500">
+                        <h4 class="font-display font-bold text-base text-white mb-1.5">24/7 Rapid Action Force</h4>
+                        <p class="text-gray-400 text-xs leading-relaxed">Always responsive grid control experts deployed swiftly via coordinated radio command modules during sudden infrastructure down-phases.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-900 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">Portfolio Highlights</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">Milestone Engineering Feats Across Capital Infrastructure</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Discover how <a href="https://sites.google.com/view/anthonygferry/home" target="_blank" rel="noopener noreferrer" class="text-electric-400 hover:underline">Anthony G. Ferry Inc.</a> structures intricate distribution panels and primary high-voltage frameworks for commercial, industrial, and high-density environments.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="relative group overflow-hidden rounded-lg border border-white/10 bg-navy-800">
+                    <img src="1.jpg" alt="High-Rise Development electrical work" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-90 p-5 flex flex-col justify-end">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-electric-400 mb-1">High-Rise Residential</span>
+                        <h4 class="font-display font-bold text-base text-white mb-1">Manhattan Structural Skyline Towers</h4>
+                        <p class="text-gray-400 text-[11px] leading-relaxed line-clamp-2">Complete multi-phase circuit blueprints, internal high-rise sub-grid layouts, and individual luxury multi-meter control centers.</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border border-white/10 bg-navy-800">
+                    <img src="2.jpg" alt="Commercial high voltage sub station layout" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-90 p-5 flex flex-col justify-end">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-electric-400 mb-1">Mixed-Use Developments</span>
+                        <h4 class="font-display font-bold text-base text-white mb-1">Westchester Retail & Living Complex</h4>
+                        <p class="text-gray-400 text-[11px] leading-relaxed line-clamp-2">Integrated retail high-draw power linkages mapped into energy-saving building management systems.</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border border-white/10 bg-navy-800">
+                    <img src="3.jpg" alt="Industrial generator systems installations" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-90 p-5 flex flex-col justify-end">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-electric-400 mb-1">Commercial Properties</span>
+                        <h4 class="font-display font-bold text-base text-white mb-1">Corporate Data Hub Facilities</h4>
+                        <p class="text-gray-400 text-[11px] leading-relaxed line-clamp-2">Mission critical redundancy matrix layouts, high performance server backup nodes, and structural cooling grids.</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border border-white/10 bg-navy-800">
+                    <img src="4.jpg" alt="Civic sub-station infrastructure grid" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-90 p-5 flex flex-col justify-end">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-electric-400 mb-1">Infrastructure Projects</span>
+                        <h4 class="font-display font-bold text-base text-white mb-1">Metropolitan Utility Transit Upgrades</h4>
+                        <p class="text-gray-400 text-[11px] leading-relaxed line-clamp-2">Civic system cabling, severe weather protection matrices, and structural subway system switchgear units.</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border border-white/10 bg-navy-800">
+                    <img src="5.jpg" alt="Medical facility surgical power network grid" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-90 p-5 flex flex-col justify-end">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-electric-400 mb-1">Healthcare Facilities</span>
+                        <h4 class="font-display font-bold text-base text-white mb-1">Bronx Specialized Surgical Ward</h4>
+                        <p class="text-gray-400 text-[11px] leading-relaxed line-clamp-2">Zero fail life support network configurations, dedicated backup transfer controls, and medical cleanroom electronics.</p>
+                    </div>
+                </div>
+                <div class="relative group overflow-hidden rounded-lg border border-white/10 bg-navy-800">
+                    <img src="6.jpg" alt="Restaurant electrical lines layout" class="w-full h-64 object-cover transform group-hover:scale-105 transition duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent opacity-90 p-5 flex flex-col justify-end">
+                        <span class="text-[10px] uppercase font-bold tracking-wider text-electric-400 mb-1">Retail & Restaurant</span>
+                        <h4 class="font-display font-bold text-base text-white mb-1">High-Volume Culinary Venues</h4>
+                        <p class="text-gray-400 text-[11px] leading-relaxed line-clamp-2">Industrial kitchen walk-in custom control circuits, variable ambient lighting automation arrays, and primary exhaust setups.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-800 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">Operational Framework</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">How We Work: Systematic Project Lifecycle</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    At <a href="https://anthonygferryinc.wixsite.com/anthonygferry" target="_blank" rel="noopener noreferrer" class="text-electric-400 hover:underline">Anthony G. Ferry Inc.</a>, we treat all operations with extreme systematic precision. Our custom phase blueprint maps every workflow loop from structural site scoping to long-term lifecycle safety checks.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-6 relative">
+                <div class="glass-card p-5 rounded-lg relative">
+                    <div class="text-3xl font-display font-black text-electric-500/20 mb-3">01</div>
+                    <h4 class="font-display font-bold text-sm text-white mb-1">Consultation</h4>
+                    <p class="text-gray-400 text-[11px] leading-relaxed">Comprehensive breakdown of spatial electrical criteria, code requirements, and core deployment limits.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg relative">
+                    <div class="text-3xl font-display font-black text-electric-500/20 mb-3">02</div>
+                    <h4 class="font-display font-bold text-sm text-white mb-1">Site Assessment</h4>
+                    <p class="text-gray-400 text-[11px] leading-relaxed">Rigorous real-world mapping of utility nodes, field diagnostics, and infrastructure parameters.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg relative">
+                    <div class="text-3xl font-display font-black text-electric-500/20 mb-3">03</div>
+                    <h4 class="font-display font-bold text-sm text-white mb-1">Engineering</h4>
+                    <p class="text-gray-400 text-[11px] leading-relaxed">Complete structural blueprint drawing, circuit balance modeling, and full localized code validation approvals.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg relative">
+                    <div class="text-3xl font-display font-black text-electric-500/20 mb-3">04</div>
+                    <h4 class="font-display font-bold text-sm text-white mb-1">Installation</h4>
+                    <p class="text-gray-400 text-[11px] leading-relaxed">On-site master-level phase deployment, clean wiring runs, and systematic material organization layout controls.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg relative">
+                    <div class="text-3xl font-display font-black text-electric-500/20 mb-3">05</div>
+                    <h4 class="font-display font-bold text-sm text-white mb-1">Testing & Inspection</h4>
+                    <p class="text-gray-400 text-[11px] leading-relaxed">Heavy load grid testing diagnostics, thorough thermal inspections, and external agency sign-offs.</p>
+                </div>
+                <div class="glass-card p-5 rounded-lg relative">
+                    <div class="text-3xl font-display font-black text-electric-500/20 mb-3">06</div>
+                    <h4 class="font-display font-bold text-sm text-white mb-1">Ongoing Support</h4>
+                    <p class="text-gray-400 text-[11px] leading-relaxed">Continuous system fine-tuning loops, proactive preventative maintenance schedules, and rapid action responses.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-900 reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">Client Verification</span>
+                <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-4">Trusted by Industry Leading Developers & Contractors</h2>
+                <p class="text-gray-400 text-sm sm:text-base">
+                    Read the verified reviews from general contractors and property developers who rely on <a href="https://anthonygferryinc.odoo.com/" target="_blank" rel="noopener noreferrer" class="text-electric-400 hover:underline">Anthony G. Ferry Inc.</a> for premium electrical implementation.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-500 text-xs mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-xs italic leading-relaxed mb-6">
+                            "AGF Electrical handled our multi-family high-rise development framework flawlessly. Their engineering precision saved us weeks on localized regulatory inspection loops. Outstanding corporate partners."
+                        </p>
+                    </div>
+                    <div>
+                        <div class="text-sm font-display font-bold text-white">Marcus Vance</div>
+                        <div class="text-[10px] text-gray-400 font-medium tracking-wide uppercase">VP Construction, Vanguard Group</div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-500 text-xs mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-xs italic leading-relaxed mb-6">
+                            "When our primary corporate asset experienced critical circuit switchgear breakdowns, AGF's emergency response squad re-mapped the load cells efficiently. Highly recommended for heavy commercial infrastructure."
+                        </p>
+                    </div>
+                    <div>
+                        <div class="text-sm font-display font-bold text-white">Elena Rostova</div>
+                        <div class="text-[10px] text-gray-400 font-medium tracking-wide uppercase">Director of Operations, Apex Real Estate</div>
+                    </div>
+                </div>
+                <div class="glass-card p-6 rounded-lg flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-yellow-500 text-xs mb-4">
+                            <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                        </div>
+                        <p class="text-gray-300 text-xs italic leading-relaxed mb-6">
+                            "Their Cat6 structural cable routing design for our data storage facility updates was clinically pristine. Clean testing passes and complete transparency from proposal phase down to sign-off."
+                        </p>
+                    </div>
+                    <div>
+                        <div class="text-sm font-display font-bold text-white">James Sterling</div>
+                        <div class="text-[10px] text-gray-400 font-medium tracking-wide uppercase">Lead Site Manager, Skyline Infrastructure</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-16 bg-gradient-to-r from-red-700 to-red-900 px-4 sm:px-6 lg:px-8 text-center relative overflow-hidden">
+        <div class="absolute inset-0 bg-[linear-gradient(to_right,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:3rem_3rem]"></div>
+        <div class="relative z-10 max-w-4xl mx-auto">
+            <h2 class="font-display font-black text-2xl sm:text-4xl text-white tracking-tight mb-3 uppercase">Need Immediate Electrical Assistance?</h2>
+            <p class="text-red-100 text-sm max-w-2xl mx-auto mb-6 font-medium leading-relaxed">
+                Critical power distribution faults, hazardous industrial line short-circuits, and sudden grid dropouts require master-level mitigation instantly. Our rapid-action commercial emergency crews stand by 24/7/365 to stabilize your infrastructure.
+            </p>
+            <a href="tel:+17185550190" class="inline-flex items-center space-x-3 bg-white text-red-700 font-bold px-8 py-3.5 rounded-md hover:bg-gray-100 transition duration-200 tracking-wider text-sm uppercase shadow-xl">
+                <i class="fas fa-phone-alt"></i> <span>Call Emergency Squad Now</span>
+            </a>
+        </div>
+    </section>
+
+    <section id="contact" class="py-24 px-4 sm:px-6 lg:px-8 bg-navy-900 relative reveal">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+                <div>
+                    <span class="text-xs font-bold tracking-widest text-electric-500 uppercase block mb-3">Initiate Project</span>
+                    <h2 class="font-display font-bold text-3xl sm:text-4xl text-white tracking-tight mb-6">Let's Discuss Your Commercial Project Scaling</h2>
+                    <p class="text-gray-300 text-sm leading-relaxed mb-8">
+                        Connect with our engineering estimation office today to schedule site assessments, blueprint validations, or tender pricing runs. <a href="https://anthonygferryinc.wordpress.com/" target="_blank" rel="noopener noreferrer" class="text-electric-400 font-medium hover:underline">Anthony G. Ferry Inc.</a> delivers fast turnaround parameters for modern enterprise operations.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-navy-800 rounded border border-white/10 flex items-center justify-center text-electric-400 shrink-0"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-0.5">Headquarters Office</h5>
+                                <p class="text-gray-400 text-xs">Bronx, NY 10451</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-navy-800 rounded border border-white/10 flex items-center justify-center text-electric-400 shrink-0"><i class="fas fa-globe"></i></div>
+                            <div>
+                                <h5 class="text-xs font-bold uppercase tracking-wider text-white mb-0.5">Regions Protected</h5>
+                                <p class="text-gray-400 text-xs">New York City, Westchester County, New Jersey, Florida</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-8 rounded-lg overflow-hidden border border-white/10 h-48 bg-navy-800 relative">
+                        <div class="absolute inset-0 bg-navy-800/50 flex flex-col items-center justify-center p-4 text-center">
+                            <i class="fas fa-map-marked-alt text-electric-500 text-3xl mb-2"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-white">Bronx, New York Corporate Center</span>
+                            <span class="text-[10px] text-gray-400 mt-1">Map display bounds active for NYC & Tri-State Regions</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="glass-card p-8 rounded-xl border border-white/10">
+                    <form action="#" method="POST" class="space-y-4" onsubmit="event.preventDefault(); alert('Form submitted successfully!');">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-300 mb-1">Full Name</label>
+                                <input type="text" required class="w-full bg-navy-900 border border-white/10 rounded px-4 py-2.5 text-xs text-white focus:outline-none focus:border-electric-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-300 mb-1">Corporate Email</label>
+                                <input type="email" required class="w-full bg-navy-900 border border-white/10 rounded px-4 py-2.5 text-xs text-white focus:outline-none focus:border-electric-500 transition-colors">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-300 mb-1">Contact Phone</label>
+                                <input type="tel" required class="w-full bg-navy-900 border border-white/10 rounded px-4 py-2.5 text-xs text-white focus:outline-none focus:border-electric-500 transition-colors">
+                            </div>
+                            <div>
+                                <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-300 mb-1">Company Name</label>
+                                <input type="text" required class="w-full bg-navy-900 border border-white/10 rounded px-4 py-2.5 text-xs text-white focus:outline-none focus:border-electric-500 transition-colors">
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-[10px] font-bold uppercase tracking-widest text-gray-300 mb-1">Project Details & Parameters</label>
+                            <textarea rows="4" required class="w-full bg-navy-900 border border-white/10 rounded px-4 py-2.5 text-xs text-white focus:outline-none focus:border-electric-500 transition-colors" placeholder="Describe the service context, estimated deadlines, and scope specifications..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-3 bg-electric-600 hover:bg-electric-500 text-white text-xs font-bold uppercase tracking-wider rounded transition-colors shadow-lg shadow-electric-600/10">Submit Briefing Package</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-navy-900 border-t border-white/10 pt-16 pb-8 px-4 sm:px-6 lg:px-8 text-xs text-gray-400">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 mb-12">
+            <div>
+                <div class="flex items-center space-x-3 mb-4">
+                    <img src="Anthony G ferry Logo (1).jpg" alt="Anthony G. Ferry Inc. Logo" class="h-10 w-10 object-cover rounded">
+                    <span class="font-display font-bold text-sm tracking-wider text-white uppercase">Anthony G. Ferry Inc.</span>
+                </div>
+                <p class="leading-relaxed text-gray-400 text-[11px] mb-4">
+                    Providing market-certified infrastructure design, heavy electrical configurations, and emergency electrical control layouts throughout the United States regions since 1972.
+                </p>
+                <div class="flex items-center space-x-4 text-base">
+                    <a href="https://www.linkedin.com/company/anthony-g-ferry" target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://www.crunchbase.com/organization/anthony-g-ferry-inc" target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors"><i class="fas fa-building text-sm"></i></a>
+                    <a href="https://www.facebook.com/anthonygferry/" target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors"><i class="fab fa-facebook"></i></a>
+                    <a href="https://x.com/anthonygferry" target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.pinterest.com/anthonygferryinc/" target="_blank" rel="noopener noreferrer" class="hover:text-electric-400 transition-colors"><i class="fab fa-pinterest"></i></a>
+                </div>
+            </div>
+            <div>
+                <h4 class="font-display font-bold text-white text-xs uppercase tracking-widest mb-4">Navigation Blocks</h4>
+                <ul class="space-y-2">
+                    <li><a href="#about" class="hover:text-electric-400 transition-colors">About Legacy</a></li>
+                    <li><a href="#services" class="hover:text-electric-400 transition-colors">Core Capability</a></li>
+                    <li><a href="#why-choose" class="hover:text-electric-400 transition-colors">Why Choose Us</a></li>
+                    <li><a href="#projects" class="hover:text-electric-400 transition-colors">Project Index</a></li>
+                    <li><a href="#process" class="hover:text-electric-400 transition-colors">Our Workflow</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-display font-bold text-white text-xs uppercase tracking-widest mb-4">Our Services</h4>
+                <ul class="space-y-2">
+                    <li><a href="#services" class="hover:text-electric-400 transition-colors">Commercial Installation</a></li>
+                    <li><a href="#services" class="hover:text-electric-400 transition-colors">Infrastructure Projects</a></li>
+                    <li><a href="#services" class="hover:text-electric-400 transition-colors">Backup Generator Mapping</a></li>
+                    <li><a href="#services" class="hover:text-electric-400 transition-colors">Fiber Optics / Cat6 Networks</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4 class="font-display font-bold text-white text-xs uppercase tracking-widest mb-4">Contact Gateway</h4>
+                <p class="leading-relaxed text-gray-400 text-[11px] mb-2">
+                    Headquarters Terminal:<br>Bronx, New York City, US
+                </p>
+                <p class="leading-relaxed text-gray-400 text-[11px]">
+                    Direct Dispatch Channel:<br><a href="tel:+17185550190" class="text-white hover:text-electric-400 font-semibold">+1 (718) 555-0190</a>
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-white/10 pt-8 flex flex-col sm:flex-row items-center justify-between text-[11px] text-gray-500">
+            <p>&copy; 2026 Anthony G. Ferry Inc. All Rights Reserved. Engineered with extreme technical resilience.</p>
+            <div class="flex space-x-4 mt-4 sm:mt-0">
+                <a href="https://anthonyferry.framer.website/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">Privacy Protocols</a>
+                <a href="https://anthonyferry.framer.website/" target="_blank" rel="noopener noreferrer" class="hover:text-gray-300">Terms of Governance</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Navigation Toggle Handling
+        const menuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Intersection Observer for Scroll Trigger Animations
+        const revealElements = document.querySelectorAll('.reveal');
+        const revealObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.15 });
+
+        revealElements.forEach(element => {
+            revealObserver.observe(element);
+        });
+
+        // Initially activate the hero context elements if available
+        document.addEventListener("DOMContentLoaded", () => {
+            const heroReveal = document.querySelector('#about');
+            if(heroReveal) {
+                // Ensure layout triggers are active if within visual view bounds
+                heroReveal.classList.add('active');
+            }
+        });
+    </script>
+</body>
+</html>
