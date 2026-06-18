@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generated for Anthony G. Ferry Inc. | Electrical Contractors -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    
+    <!-- Primary Canonical Domain Asset (From your Schema Structured Data) -->
+    <url>
+        <loc>https://anthonyferry.framer.website/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.00</priority>
+    </url>
+
+    <!-- Interactive Framer Portal Asset -->
+    <url>
+        <loc>https://anthonygferry.framer.website/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.90</priority>
+    </url>
+
+    <!-- Main Corporate Web Node -->
+    <url>
+        <loc>https://anthonygferryinc.wordpress.com/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>0.85</priority>
+    </url>
+
+    <!-- Secondary Node Infrastructure -->
+    <url>
+        <loc>http://anthonygferryinc.website3.me/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- Deployment Asset Node -->
+    <url>
+        <loc>https://anthonygferry.weebly.com/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- Mobile-Optimized Interface Asset -->
+    <url>
+        <loc>https://anthonygferry.simdif.com/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.70</priority>
+    </url>
+
+    <!-- Google Optimization Gateway -->
+    <url>
+        <loc>https://sites.google.com/view/anthonygferry/home</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- Enterprise Portfolio Network Node -->
+    <url>
+        <loc>https://anthonygferryinc.wixsite.com/anthonygferry</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+
+    <!-- Operational System Node -->
+    <url>
+        <loc>https://anthonygferryinc.odoo.com/</loc>
+        <lastmod>2026-06-18</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.65</priority>
+    </url>
+</urlset>
